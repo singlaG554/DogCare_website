@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PetLover - Pet Care Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <!-- Flaticon Font -->
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .A {
+            overflow-y: scroll;
+            /* background-image: url('dogimg.jpg'); */
+            background-color: lightgreen;
+            background-attachment: fixed;
+            width: 700px;
+            height: 700px;
+            box-sizing: border-box;
+            background-repeat: no-repeat;
+            background-size: 500px;
+            background-position: center;
+            justify-content: center;
+            padding :10px;
+            border: 2px solid lightgreen;
+            display: inline-block;
+            margin-left: 28%;
+            margin-top: 20px;
+        }
+
+
+        .boxes {
+            /* background-color: #f86f15;
+            color: aliceblue; */
+            background-color:lightgray;
+            color: black;
+            margin: auto;
+            border: 2px lightgray solid;
+            text-align: center;
+            font-size: 40px;
+            display: block;
+            /* opacity: 10; */
+        }
+    </style>
+    <script>
+        function validate() {
+            //  if (!document.myform.check.checked )
+            // { alert("Please accept the T & C ");check.focus(); return false ; }
+
+            /*Reservation*/
+            var a = document.myform.Anum.value
+            var pat1 = /^\d{6}$/
+            if (!pat1.test(a)) 
+            { alert("Enter valid Area Code "); Anum.focus(); return false; }
+            
+            var b = document.myform.Pnum.value
+            var pat2 = /^\d{10}$/
+            if (!pat2.test(b) ) 
+            { alert("Enter valid Mobile number "); Pnum.focus(); return false; }
+            
+            var CText = document.querySelector('input[name="CompText"]:checked') 
+            if (CText == null) 
+            { alert("Please select any one option to whether you want to recieve complimentary message or not . ");
+              return false; }
+
+            var playother = document.querySelector('input[name="play"]:checked') 
+            if (playother == null) 
+            { alert("Please fill playtime section completely. "); 
+              return false; }
+
+            var playgen = document.querySelector('input[name="play1"]:checked') 
+            if (playgen == null) 
+            { alert("Please fill playtime section completely. "); 
+              return false; }
+            
+            var Bite = document.querySelector('input[name="bitten"]:checked') 
+            if (Bite == null) 
+            { alert("Please fill playtime section completely. "); 
+                return false; }
+
+        }</script>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row py-3 px-lg-5">
+            <div class="col-lg-4">
+                <a href="" class="navbar-brand d-none d-lg-block">
+                    <h1 class="m-0 display-5 text-capitalize"><span class="text-primary">Hommies for </span>Doggies</h1>
+                </a>
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+                <div class="d" style="display: inline-flex; align-items: center;">
+                    <div class="d - pr-3 border-right"
+                        style="display: inline-flex; flex-direction: column; text-align: center;">
+                        <h6>Opening Hours </h6>
+                        <p class="m" style="margin: 0%;">8.00AM - 6.00PM </p>
+                    </div>
+                    <div class="d- px-3 border-right "
+                        style="display: inline-flex; flex-direction: column; text-align: center;">
+                        <h6>Email Us</h6>
+                        <p class="m" style="margin: 0%;">homiesfordogs@hfd.com</p>
+                    </div>
+                    <div class="d"
+                        style="display: inline-flex; flex-direction: column; text-align: center; padding-left: 3px;">
+                        <h6>Call Us</h6>
+                        <p class="m" style="margin: 0%;">+91 95013-30001</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <Navbar Start -->
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav mr-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="services.html" class="nav-item nav-link">Services</a>
+                        <a href="booking.html" class="nav-item nav-link active ">Booking</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <!-- <a href="Sign up.html"
+                        style="text-decoration: none; font-size: 20px; margin-left: 20px; border: 2px orangered solid; padding: 5px;">
+                        Sign up </a> -->
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+        <!-- Form -->
+        <div class="A" style="color: black;">
+            <form name="myform" onsubmit="return validate()" action="Booking confirmed.html">
+                <fieldset>
+                    <!-- Boarding Admission form -->
+                    <div class="boxes"> Boarding Admission Form</div>
+                    By clicking here, you agree that you understand that completing this form does not reserve a kennel for your pet.
+                    <div><input type="checkbox" id="check" required> Yes, I agree. </div>
+                    <p></p>
+
+                    <!-- Reservation Details  -->
+                    <div class="boxes">
+                        Reservation Details </div>
+                    <p>
+                    <p>
+                        Owner's Full Name : <input box="text" id="OwnerName" pattern="[A-Za-z ]*$" required>
+                    <p>
+                        Pet's Name : <input box="text" id="PetName" pattern="[A-Za-z ]*$" required>
+                    <p>
+                        Check-In Date : <input type="date" id="checkinDate" required>
+                    <p>
+                        Check-Out Date : <input type="date" id="checkoutDate" required>
+                    <p>
+                        Emergency Contact :
+                        <input box="text" size="6" placeholder="Area Code" id="Anum" required>
+                        <input box="tel" placeholder="Phone Number " id="Pnum" required>
+                    <p></p>
+                    Would you like to receive complimentary text messages while you are away?<br>
+                    <input type="radio" name="CompText" id="msg1">Yes<br>
+                    <input type="radio" name="CompText" id="msg2">No<p>
+
+                        <!-- Feeding Information -->
+                    <div class="boxes">Feeding Information</div>
+                    <p>
+                        We recommend that you bring your pets normal diet in with you to avoid any upset stomaches.For
+                        convenience, it is acceptable to premeasure the food. </p>
+                    <p>
+                        What type/ brand of food does your pet eat ?<br>
+                        <input box="text" id="a1" pattern="[A-Za-z].{2,}" required>
+                    </p>
+                    <p>
+                        How much food do you feed your pet ?<br>
+                        <input box="text" id="a2" required>
+                    </p>
+                    <p>
+                        How often do you feed your pet ?<br>
+                        <input box="text" id="a3" required>
+                    </p>
+                    <p>
+                        Additional Comments: <br> <textarea rows="3" cols="80" id="a4"></textarea>
+                    </p>
+
+                    <!-- Medications  -->
+                    <div class="boxes"> Medications </div>
+                    We are happy to give your pet his/her medications at no additional costs.<br> Please list any medications your pet will need/ is currently taking along with dosages and how often they are given.
+                    <br> Also, please list the reason the medications was prescribed. <p></p>
+                    <label>
+                        Medications :
+                    </label><br>
+                    <textarea rows="3" cols="80" id="a1"></textarea>
+                    <p></p>
+
+                    <!-- Playtime -->
+                    <p></p>
+                    <div class="boxes">Playtime </div>
+                    Does your dog play well with other dogs ? <br>
+                    <input type="checkbox" name ="play">Yes <br>
+                    <input type="checkbox" name ="play">No, if so further questions <br>
+                    <p>All pets will receive a minimum of one-half hour of playtime twice a day. If they get along well with other dogs they can play in supervised groups. If they do not, they will get individual play time with one of our boarding staff.</p>
+                    <p>Please answer the following questions about your pet.</p>
+                    <p>Your pet play well with :
+                        <br><input type="checkbox" name="play1">Male dogs <br>
+                        <input type="checkbox" name="play1">Female dogs <br>
+                        <input type="checkbox" name="play1">Both <br>
+                    </p>
+                    <p>Has your dog ever bitten another dog or person?<br>
+                        <input type="radio" name="bitten">Yes
+                        <input type="radio" name="bitten">No
+                    </p>
+                    <!-- Terms and Conditions  -->
+                    <p></p>
+                    <div class="boxes">Terms and Conditions</div>
+                    1. Pets must be picked up between 8 a.m. and 6:30 p.m. Mondays through Thursdays, 8 a.m. and 5:30p.m. on Fridays, and 8:00a.m. and 11:30 a.m. on SaturdaysPick-ups and drop-offs are not available on Sundays or holidays.<br>2. This facility cannot guarantee the health of any animal, but pledges toprovide appropriate care to all boardersI agree to hold this facility harmless for conditions that often are unavoidable in boarding environments,including, but not limited to, weight loss or gain, rough hair coat, kennel cough, upper respiratoryinfection,diarrhea,and fleas.<br> 3.If my pet identified on this record should become ill, I request that West Suburban Animal Hospital provide all medical/surgical treatment it deems necessary, with fees not to exceed $50. I acknowledge that in the event of my pet's illness, the staff may not be able to contact me immediately Nonetheless, theyare authorized toinitiate appropriate treatment until my agent or I can be reached. I agree to payall related expenses associated with the treatment of my pet until I am available to discuss furthercare and related wwith the attending veterinarian.<br> 4. If pets are boarding in the same kennel we reserve the right to separate if problems arise.<br>
+
+                    <strong>
+                        By clicking here , you agree that you have read the above and are in full agreement.<br>
+                        <input type="checkbox" id="a5" required> Yes,I agree
+                    </strong>
+        </div>
+        </fieldset>
+
+        <p> </p>
+        <center>
+            <input type="submit" id="submit" name="submit">
+        </center>
+        </form>
+
+        <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-4 col-md-12 mb-5">
+                <h1 class="mb-3 display-5 text-capitalize text-white"><span class="text-primary">Hommies for </span>Doggies</h1>
+                <p class="m-0">We offer boarding facilities for your pets while keeping them healthy and happy. They are manned by staff who have expertise in handling pets like dogs and cats. We provide both Air Conditioned and non-Air Conditioned accommodations. They are also  lots of toys for pets to keep them engaged. Our team prepare home-cooked meals for the pets. Medical attention is available to them whenever the need arises.          </p>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-primary mb-4">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+91 95013 30001</p>
+                        <p><i class="fa fa-envelope mr-2"></i>homiesfordogs@hfd.com</p>
+                        <div class="d-flex justify-content-start mt-4">
+                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="https://twitter.com/BTS_twt"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="https://www.facebook.com/ninjaofficial/"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="https://in.linkedin.com/company/sliet-longowal"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="https://www.instagram.com/its_ninja/"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-primary mb-4">Popular Links</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                            <a class="text-white mb-2" href="services.html"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                            <a class="text-white mb-2" href="booking.html"><i class="fa fa-angle-right mr-2"></i>Booking</a>
+                            <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-primary mb-4">Newsletter</h5>
+                        <form action="Newsletter_done.html">
+                            <div class="form-group">
+                                <input type="text" class="form-control border-0" placeholder="Your Name" required="required" pattern="[A-Za-z ]*$" />
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control border-0" placeholder="Your Email" required="required" />
+                            </div>
+                            <div>
+                                <button class="btn btn-lg btn-primary btn-block border-0" type="submit">Submit Now</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/tempusdominus/js/moment.min.js"></script>
+        <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+</body>
+
+</html>
